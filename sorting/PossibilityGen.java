@@ -19,8 +19,11 @@ public class PossibilityGen {
 		List<int[]> poss = new ArrayList<>();
 		int[] a = new int[n];
 		for (int i = 0; i < n; i++) {
+			a[i] = i;
+		}
+
 			poss.add(a.clone());
-		} while (nextPossibility(a)){
+		 while (nextPossibility(a)){
 			poss.add(a.clone());
 		}
 		return poss;

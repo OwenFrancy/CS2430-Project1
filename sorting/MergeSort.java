@@ -26,7 +26,7 @@ public class MergeSort implements Sorter{
 	}
 	
 	private void merge(int[] a, int[] aux, int lo, int mid, int hi, ComparisonCounter c) {
-		System.arraycopy(aux,  lo, aux, lo, hi - lo + 1);
+		System.arraycopy(a,  lo, aux, lo, hi - lo + 1);
 		int i = lo, j = mid + 1, k = lo;
 		while (i <= mid && j <= hi) {
 			c.inc();

@@ -14,7 +14,7 @@ public class ShakerSort implements Sorter{
 			for (int i = left; i < right; i++) {
 				counter.inc();
 				if (a[i] > a[i + 1]) {
-					swap(a, i - 1, i);
+					swap(a, i, i + 1);
 					swapped = true;
 				}
 			}

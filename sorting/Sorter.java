@@ -4,7 +4,7 @@
  */
 package sorting;
 
-public interface Sorter {
+public interface 	Sorter {
 	void sort(int[] a, ComparisonCounter counter);
 	
 	String name();
