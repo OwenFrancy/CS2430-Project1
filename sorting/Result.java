@@ -4,6 +4,12 @@
  */
 package sorting;
 
+/**
+ * Represents the result of running a sorting algorithm on a single permutation.
+ * Stores the original input array and the number of comparisons performed.
+ *
+ * <p>Used for ranking best/worst cases and computing averages.
+ */
 public class Result implements Comparable<Result>{
 	public final int[] input;
 	public final long comparisons;
