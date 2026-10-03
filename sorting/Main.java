@@ -10,7 +10,21 @@ import java.util.Collections;
 import java.util.List;
 
 public class Main {
-
+    
+/**
+ * Main driver for the sorting experiment. Generates all possibilities for
+ * n = 4, 6, and 8, runs each sorting algorithm on every possibilities, and
+ * records comparison counts.
+ *
+ * <p>Outputs:
+ * <ul>
+ *   <li>Best 10 cases (fewest comparisons)</li>
+ *   <li>Worst 10 cases (most comparisons)</li>
+ *   <li>Average comparisons across all possibilities</li>
+ * </ul>
+ *
+ * <p>This class ensures full reproducibility of the experiment.
+ */
     private static final Sorter[] SORTERS = new Sorter[] {
         new MergeSort(),
         new QuickSort(),
@@ -31,6 +45,12 @@ public class Main {
         }
     }
 
+    /**
+     * Runs a single sorting algorithm on all permutations and prints summary statistics.
+     *
+     * @param sorter sorting algorithm
+     * @param perms list of possibilities
+     */
     private static void runExperiment(Sorter sorter, List<int[]> perms, int n) {
         List<Result> results = new ArrayList<>(perms.size());
         ComparisonCounter counter = new ComparisonCounter();
