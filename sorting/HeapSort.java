@@ -4,6 +4,15 @@
  */
 package sorting;
 
+/**
+ * Implementation of heapsort using a max-heap. The algorithm first builds a
+ * heap and then repeatedly extracts the maximum element.
+ *
+ * <p>All ordering comparisons performed during heapify are counted using the
+ * provided ComparisonCounter.
+ *
+ * <p>Time complexity: O(n log n).
+ */
 public class HeapSort implements Sorter {
 
     @Override
