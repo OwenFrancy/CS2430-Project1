@@ -6,6 +6,15 @@ package sorting;
 
 import java.util.Random;
 
+/**
+ * Implementation of quicksort using randomized pivot selection.
+ * The random number generator is seeded for reproducibility.
+ *
+ * <p>All ordering comparisons performed during partitioning are counted using
+ * the provided ComparisonCounter.
+ *
+ * <p>Average-case: O(n log n). Worst-case: O(n²).
+ */
 public class QuickSort implements Sorter{
 	private final Random rand = new Random(0);
 	
@@ -29,7 +38,7 @@ public class QuickSort implements Sorter{
 		swap(a, pivotIndex, hi);
 		int store = lo;
 		for (int i = lo; i < hi; i++) {
-			c.inc();
+			c.inc(); // ordering comparison
 			if (a[i] < pivot) {
 				swap(a, i, store++);
 			}
