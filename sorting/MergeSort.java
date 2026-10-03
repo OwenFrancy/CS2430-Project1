@@ -4,6 +4,13 @@
  */
 package sorting;
 
+/**
+	 * Implementation of top-down mergesort. This algorithm recursively divides
+	 * the array and merges sorted halves. All ordering comparisons performed during
+	 * merging are counted using the provided ComparisonCounter.
+	 *
+	 * <p>Mergesort is stable and runs in O(n log n) time.
+*/
 public class MergeSort implements Sorter{
 
 	@Override
