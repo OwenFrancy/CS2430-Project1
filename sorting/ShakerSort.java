@@ -4,6 +4,15 @@
  */
 package sorting;
 
+/**
+ * Implementation of shaker sort (bidirectional bubble sort). The algorithm
+ * sweeps left-to-right and then right-to-left, bubbling elements into place.
+ *
+ * <p>Every element-to-element comparison is counted using the provided
+ * ComparisonCounter.
+ *
+ * <p>Worst-case: O(n²). Best-case: O(n) when already sorted.
+ */
 public class ShakerSort implements Sorter{
 
 	@Override
