@@ -1,4 +1,3 @@
-
 /**
  * @author Owen Francy, Helen Le, Mustafa Alrubaye
  * Creates all possible variants of integers within 0 through n-1. 
@@ -9,8 +8,13 @@
  */
 package sorting;
 
+/**
+     * Returns a list containing all possibilities of 0..n−1 in  order.
+     *
+     * @param n size of the possibility set
+     * @return list of possibilities
+*/
 import java.util.ArrayList;
-//import java.util.Arrays;
 import java.util.List;
 
 public class PossibilityGen {
@@ -28,7 +32,12 @@ public class PossibilityGen {
 		}
 		return poss;
 	}
-	
+
+	/**
+     * Computes the next possibility of the array.
+     *
+     * @return true if a new possibility was produced, false if no more exist
+     */
 	private static boolean nextPossibility(int[] a) {
 		int n = a.length;
 		int i = n - 2;
