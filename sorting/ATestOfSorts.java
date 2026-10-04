@@ -3,11 +3,27 @@ package sorting;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+/*
+ * JUnit testing to verify that all 4 sorting  algorithms are functional.
+ * the 4 Sorting algorithms being: HeapSort, MergeSort, QuickSort, and ShakerSort.
+ * the tests covers unsorted, empty, and already sorted edge cases.
+ * 
+ */
 
 class ATestOfSorts {
 /*
  * Heap
  */
+	@Test
+	public void testHeapreverse() { 
+		HeapSort sorter = new HeapSort();
+		ComparisonCounter counter = new ComparisonCounter();
+		
+		int[] input = {3,2,1,0};
+		int[] output = {0,1,2,3};
+		sorter.sort(input, counter);
+		assertArrayEquals(output, input);
+	}
 	@Test
 	public void testHeapNone() { // checking for no sorts 
 		HeapSort sorter = new HeapSort();
@@ -18,7 +34,6 @@ class ATestOfSorts {
 		sorter.sort(input, counter);
 		assertArrayEquals(output, input);
 	}
-
 	@Test
 	public void testHeap1Sort() { // checking for 1 sort
 		HeapSort sorter = new HeapSort();
@@ -74,7 +89,15 @@ class ATestOfSorts {
 /*
  * merge
  */
-	@Test
+	public void testMergeReverse() {
+		MergeSort sorter = new MergeSort();
+		ComparisonCounter counter = new ComparisonCounter();
+		
+		int[] input = {3,2,1,0};
+		int[] output = {};
+		sorter.sort(input, counter);
+		assertArrayEquals(output, input);
+	}
 	public void testMergeNone() {
 		MergeSort sorter = new MergeSort();
 		ComparisonCounter counter = new ComparisonCounter();
@@ -134,12 +157,23 @@ class ATestOfSorts {
 		sorter.sort(input, counter);
 		assertArrayEquals(output, input);
 	}
-	@Test
+	
 	
 	
 /*
  * Quick
  */
+	@Test
+	public void testQuickReverse() { 
+		QuickSort sorter = new QuickSort();
+		ComparisonCounter counter = new ComparisonCounter();
+	
+		int[] input = {3,2,1,0};
+		int[] output = {0,1,2,3};
+		sorter.sort(input, counter);
+		assertArrayEquals(output, input);
+	}
+	@Test
 	public void testQuickNone() { 
 		QuickSort sorter = new QuickSort();
 		ComparisonCounter counter = new ComparisonCounter();
@@ -203,6 +237,16 @@ class ATestOfSorts {
 	/*
 	 * Shaker
 	 */
+	@Test
+	public void testShakerReverse() {
+		ShakerSort sorter = new ShakerSort();
+		ComparisonCounter counter = new ComparisonCounter();
+	
+		int[] input = {3,2,1,0};
+		int[] output = {0,1,2,3};
+		sorter.sort(input, counter);
+		assertArrayEquals(output, input);
+	}
 	@Test
 	public void testShakerNone() {
 		ShakerSort sorter = new ShakerSort();
